@@ -27,24 +27,24 @@ const Navbar = () => {
       <div className="flex gap-4 text-base-bold max-lg:hidden">
         <Link
           href="/"
-          className={`hover:text-red-1 ${
-            pathname === "/" && "text-red-1"
+          className={`hover:text-green-1 ${
+            pathname === "/" && "text-green-1"
           }`}
         >
           Home
         </Link>
         <Link
           href={user ? "/wishlist" : "/sign-in"}
-          className={`hover:text-red-1 ${
-            pathname === "/wishlist" && "text-red-1"
+          className={`hover:text-green-1 ${
+            pathname === "/wishlist" && "text-green-1"
           }`}
         >
           Wishlist
         </Link>
         <Link
           href={user ? "/orders" : "/sign-in"}
-          className={`hover:text-red-1 ${
-            pathname === "/orders" && "text-red-1"
+          className={`hover:text-green-1 ${
+            pathname === "/orders" && "text-green-1"
           }`}
         >
           Orders
@@ -62,7 +62,7 @@ const Navbar = () => {
           disabled={query === ""}
           onClick={() => router.push(`/search/${query}`)}
         >
-          <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
+          <Search className="cursor-pointer h-4 w-4 hover:text-green-1" />
         </button>
       </div>
 
@@ -82,18 +82,18 @@ const Navbar = () => {
 
         {dropdownMenu && (
           <div className="absolute top-12 right-5 flex flex-col gap-4 p-3 rounded-lg border bg-white text-base-bold lg:hidden">
-            <Link href="/" className="hover:text-red-1">
+            <Link href="/" className="hover:text-green-1">
               Home
             </Link>
             <Link
               href={user ? "/wishlist" : "/sign-in"}
-              className="hover:text-red-1"
+              className="hover:text-green-1"
             >
               Wishlist
             </Link>
             <Link
               href={user ? "/orders" : "/sign-in"}
-              className="hover:text-red-1"
+              className="hover:text-green-1"
             >
               Orders
             </Link>

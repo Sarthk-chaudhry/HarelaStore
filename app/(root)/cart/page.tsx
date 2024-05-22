@@ -70,24 +70,24 @@ const Cart = () => {
                     {cartItem.size && (
                       <p className="text-small-medium">{cartItem.size}</p>
                     )}
-                    <p className="text-small-medium">${cartItem.item.price}</p>
+                    <p className="text-small-medium">₹{cartItem.item.price}</p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 items-center">
                   <MinusCircle
-                    className="hover:text-red-1 cursor-pointer"
+                    className="hover:text-green-1 cursor-pointer"
                     onClick={() => cart.decreaseQuantity(cartItem.item._id)}
                   />
                   <p className="text-body-bold">{cartItem.quantity}</p>
                   <PlusCircle
-                    className="hover:text-red-1 cursor-pointer"
+                    className="hover:text-green-1 cursor-pointer"
                     onClick={() => cart.increaseQuantity(cartItem.item._id)}
                   />
                 </div>
 
                 <Trash
-                  className="hover:text-red-1 cursor-pointer"
+                  className="hover:text-green-1 cursor-pointer"
                   onClick={() => cart.removeItem(cartItem.item._id)}
                 />
               </div>
@@ -105,7 +105,7 @@ const Cart = () => {
         </p>
         <div className="flex justify-between text-body-semibold">
           <span>Total Amount</span>
-          <span>$ {totalRounded}</span>
+          <span>₹ {totalRounded}</span>
         </div>
         <button
           className="border rounded-lg text-body-bold bg-white py-3 w-full hover:bg-black hover:text-white"

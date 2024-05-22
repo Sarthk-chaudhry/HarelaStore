@@ -29,7 +29,7 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
         <p className="text-base-bold">{productInfo.category}</p>
       </div>
 
-      <p className="text-heading3-bold">$ {productInfo.price}</p>
+      <p className="text-heading3-bold">₹ {productInfo.price}</p>
 
       <div className="flex flex-col gap-2">
         <p className="text-base-medium text-grey-2">Description:</p>
@@ -78,12 +78,12 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
         <p className="text-base-medium text-grey-2">Quantity:</p>
         <div className="flex gap-4 items-center">
           <MinusCircle
-            className="hover:text-red-1 cursor-pointer"
+            className="hover:text-green-1 cursor-pointer"
             onClick={() => quantity > 1 && setQuantity(quantity - 1)}
           />
           <p className="text-body-bold">{quantity}</p>
           <PlusCircle
-            className="hover:text-red-1 cursor-pointer"
+            className="hover:text-green-1 cursor-pointer"
             onClick={() => setQuantity(quantity + 1)}
           />
         </div>
