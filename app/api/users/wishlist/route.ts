@@ -1,4 +1,5 @@
 import User from "@/lib/models/User";
+import User from "@/lib/models/User";
 import { connectToDB } from "@/lib/mongoDB";
 
 import { auth } from "@clerk/nextjs";
