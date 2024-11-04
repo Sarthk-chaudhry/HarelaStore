@@ -15,8 +15,8 @@ type ProductType = {
   tags: [string];
   price: number;
   cost: number;
-  sizes: [string];
-  colors: [string];
+  // sizes: [string];
+  // colors: [string];
   createdAt: string;
   updatedAt: string;
 };
@@ -39,8 +39,8 @@ type OrderType = {
 
 type OrderItemType = {
   product: ProductType;
-  color: string;
-  size: string;
+  // color: string;
+  // size: string;
   quantity: number;
   _id: string;
 }
