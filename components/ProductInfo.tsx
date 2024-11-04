@@ -7,12 +7,12 @@ import { MinusCircle, PlusCircle } from "lucide-react";
 import useCart from "@/lib/hooks/useCart";
 
 const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
-  const [selectedColor, setSelectedColor] = useState<string>(
-    productInfo.colors[0]
-  );
-  const [selectedSize, setSelectedSize] = useState<string>(
-    productInfo.sizes[0]
-  );
+  // const [selectedColor, setSelectedColor] = useState<string>(
+  //   productInfo.colors[0]
+  // );
+  // const [selectedSize, setSelectedSize] = useState<string>(
+  //   productInfo.sizes[0]
+  // );
   const [quantity, setQuantity] = useState<number>(1);
 
   const cart = useCart();
@@ -36,7 +36,7 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
         <p className="text-small-medium">{productInfo.description}</p>
       </div>
 
-      {productInfo.colors.length > 0 && (
+{/*       {productInfo.colors.length > 0 && (
         <div className="flex flex-col gap-2">
           <p className="text-base-medium text-grey-2">Colors:</p>
           <div className="flex gap-2">
@@ -73,7 +73,7 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
           </div>
         </div>
       )}
-
+ */}
       <div className="flex flex-col gap-2">
         <p className="text-base-medium text-grey-2">Quantity:</p>
         <div className="flex gap-4 items-center">
@@ -95,8 +95,8 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
           cart.addItem({
             item: productInfo,
             quantity,
-            color: selectedColor,
-            size: selectedSize,
+            // color: selectedColor,
+            // size: selectedSize,
           });
         }}
       >
