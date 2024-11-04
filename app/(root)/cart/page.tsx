@@ -64,12 +64,12 @@ const Cart = () => {
                   />
                   <div className="flex flex-col gap-3 ml-4">
                     <p className="text-body-bold">{cartItem.item.title}</p>
-                    {cartItem.color && (
+{/*                     {cartItem.color && (
                       <p className="text-small-medium">{cartItem.color}</p>
                     )}
                     {cartItem.size && (
                       <p className="text-small-medium">{cartItem.size}</p>
-                    )}
+                    )} */}
                     <p className="text-small-medium">₹{cartItem.item.price}</p>
                   </div>
                 </div>
